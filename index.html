@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+      integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="game-view" id="login">
+      <form class="container">
+        <fieldset>
+          <div class="row justify-content-center">
+            <div class="col-6">
+              <label for="Nplayers" class="form-label"
+                >Select the Number of players
+              </label>
+              <select id="Nplayers" class="form-select">
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-top: 10px" class="row justify-content-center">
+            <div class="col-6">
+              <label class="form-label"> Number of cards per Player:</label>
+              <select id="Ncards" class="form-select">
+                <option>1</option>
+                <option selected>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+                <option>6</option>
+                <option>7</option>
+                <option>8</option>
+                <option>9</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+              </select>
+            </div>
+          </div>
+          <div style="margin-top: 10px" class="row justify-content-center">
+            <button
+              style="margin-right: 10px"
+              type="submit"
+              class="btn btn-primary col-2"
+            >
+              Start
+            </button>
+            <button
+              type="button"
+              id="instructions"
+              class="btn btn-primary col-2"
+            >
+              Instructions
+            </button>
+          </div>
+        </fieldset>
+      </form>
+      <div style="display: none; margin-top: 60px" id="txt">
+        <h1><strong>How to play the game</strong></h1>
+        <br />
+        <p>
+          The rooms int maze are symbolized by a 7x7 square grid cells. For each
+          room we know that which wall has a door. If there are two doors in the
+          contact wall of two neighbouring rooms, you can go from one room to
+          another. The even rows and columns in the grid can be slided, the
+          other rooms are fixed throughout the game. By sliding the rooms in the
+          grid, doors and passages open through which players can move in the
+          maze. By cleverly sliding the rooms players try to find their way to
+          the treasures. The first player to find all their treasures and return
+          to the starting square is the winner.<br />
+          <strong> At the beginning of the game</strong> we put the rooms in
+          random order and in random direction to the free fields of the game
+          board. There should be one room remaining. During the game we will
+          always use the extra room to slide the rest of the rooms. In the game
+          you have to find up to 24 treasures. These are randomly placed on the
+          board so that only one treasure can be in a room and can not be placed
+          in the corner. For each treasure there is a card. We shuffle these
+          treasure cards and divide them evenly among the players and revealing
+          the top card. Playing pieces are placed in separate corners of the
+          board.
+          <br />
+          <strong> During the game</strong> each player has to find his/her
+          revealed treasure card (that can be seen by others). The player tries
+          to get to the room showing the same treasure as on this card. For this
+          the player needs to
+
+          <br />move the maze, and after that<br />
+          move the playing piece.<br />
+          Moving the maze is done as follows: the player inserts the extra room
+          into the game board where one of the arrows shows the slidable rows
+          and columns, until another room is pushed out of the maze on the
+          opposite side. The only exception: The room cannot be inserted back
+          into the board at the same place where it was pushed out. So you
+          cannot undo the previous player's move. If the room you push out has a
+          playing piece on it, put this piece on the opposite side of the board
+          on the room that was just placed. The treasures always move with the
+          rooms. Once you have moved the maze, you can move your playing piece.
+          You can occupy any square that you can move your piece to directly,
+          without interruption. You can move your playing piece as far as you
+          like. Or, you can leave your playing piece where it is. There can be
+          more than one playing piece in one room: playing pieces do not hit
+          each other. If you are unable to get to the treasure you are searching
+          for, you can move your playing piece into a position that gives you a
+          good starting point for your next turn. Once you find the treasure you
+          are looking for, reveal your next treasure card. On your next turn,
+          find your way to this treasure on the game board. Now it’s the next
+          player’s turn. This player inserts the extra room into the game board
+          before moving their playing piece, and so on. The game is over as soon
+          as a player has found all their treasure cards and returned their
+          playing piece to its starting position. The first player to do this is
+          the winner.
+        </p>
+      </div>
+    </section>
+    <section class="game-view" id="game">
+      <button type="button" class="btn btn-primary col-2" id="buttonn">
+        Restart
+      </button>
+      <div id="cards">
+        <div id="turns">Player 1's Turn</div>
+        <div id="oneCards"></div>
+        <div id="twoCards"></div>
+        <div id="threeCards"></div>
+        <div id="fourCards"></div>
+      </div>
+      <div class="extraCard">
+        <img id="extraCard" />
+      </div>
+      <div id="leftB">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell" style="cursor: pointer" onclick="handleClick('R1')">
+          Right
+        </div>
+        <div class="cell"></div>
+        <div class="cell" style="cursor: pointer" onclick="handleClick('R2')">
+          Right
+        </div>
+        <div class="cell"></div>
+        <div class="cell" style="cursor: pointer" onclick="handleClick('R3')">
+          Right
+        </div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <div id="rightB">
+        <div class="cell"></div>
+        <div class="cell"></div>
+        <div class="cell" style="cursor: pointer" onclick="handleClick('L1')">
+          Left
+        </div>
+        <div class="cell"></div>
+        <div class="cell" style="cursor: pointer" onclick="handleClick('L2')">
+          Left
+        </div>
+        <div class="cell"></div>
+        <div class="cell" style="cursor: pointer" onclick="handleClick('L3')">
+          Left
+        </div>
+        <div class="cell"></div>
+        <div class="cell"></div>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th style="cursor: pointer" onclick="handleClick('D1')">Down</th>
+            <th></th>
+            <th style="cursor: pointer" onclick="handleClick('D2')">Down</th>
+            <th></th>
+            <th style="cursor: pointer" onclick="handleClick('D3')">Down</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="gameGrid"></tbody>
+        <tfoot>
+          <th></th>
+          <th style="cursor: pointer" onclick="handleClick('U1')">Up</th>
+          <th></th>
+          <th style="cursor: pointer" onclick="handleClick('U2')">Up</th>
+          <th></th>
+          <th style="cursor: pointer" onclick="handleClick('U3')">Up</th>
+          <th></th>
+        </tfoot>
+      </table>
+    </section>
+
+    <script src="./scripts/helperFuncs.js" defer></script>
+    <script src="./scripts/images.js" defer></script>
+    <script src="./scripts/draw.js" defer></script>
+    <script src="./scripts/main.js" defer></script>
+  </body>
+</html>

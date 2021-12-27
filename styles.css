@@ -1,0 +1,140 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.game-view {
+  margin: auto;
+  height: 768px;
+  width: 1024px;
+}
+#login {
+  background-image: url("./src/landingbg.jpg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  padding-top: 23%;
+  font-weight: 700;
+}
+#game {
+  display: none;
+  height: 768px;
+  width: 1024px;
+  position: relative;
+}
+.form-label {
+  color: rgb(245, 239, 239);
+}
+td {
+  height: 86px;
+  width: 86px;
+  border: 1px solid black;
+}
+th {
+  padding-left: 10px !important;
+  height: 86px;
+}
+table {
+  margin-left: 86px;
+}
+.empty-grid-element {
+  font-size: 40px;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+}
+.Player {
+  position: absolute;
+  top: 0;
+
+  z-index: 10;
+  max-height: 62px;
+  max-width: 62px;
+}
+
+#leftB {
+  height: 774px;
+  width: 86px;
+
+  position: absolute;
+}
+#rightB {
+  height: 774px;
+  width: 86px;
+
+  position: absolute;
+  left: 698px;
+}
+.cell {
+  width: 86px;
+  height: 86px;
+  padding: 30px;
+}
+.extraCard {
+  position: absolute;
+  right: 100px;
+  top: 100px;
+}
+
+#cards {
+  height: 500px;
+  width: 200px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+}
+#turns {
+  height: 100px;
+  width: 200px;
+  justify-content: center;
+  font-size: large;
+  font-weight: bold;
+  border: 1px solid black;
+  padding: 30px;
+}
+#oneCards {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+#twoCards {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+#threeCards {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+#fourCards {
+  height: 100px;
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid black;
+}
+.goalImage {
+  width: 33.3px;
+  height: 33.3px;
+}
+#buttonn {
+  position: absolute !important;
+  right: 0 !important;
+  bottom: 501px !important;
+}
