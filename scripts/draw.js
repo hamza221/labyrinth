@@ -13,23 +13,23 @@ const init = () => {
       let td = document.createElement("td");
       let img = document.createElement("img");
       if (col === 0 && row == 0) {
-        img.src = "../src/" + images.U.blank[0];
+        img.src = "./src/" + images.U.blank[0];
         td.appendChild(img);
       } else if (col === 0 && row == 6) {
-        img.src = `../src/${images.U.blank[270]}`;
+        img.src = `./src/${images.U.blank[270]}`;
         td.appendChild(img);
       } else if (col === 6 && row === 0) {
-        img.src = "../src/" + images.U.blank[90];
+        img.src = "./src/" + images.U.blank[90];
         td.appendChild(img);
       } else if (col == 6 && row == 6) {
-        img.src = "../src/" + images.U.blank[180];
+        img.src = "./src/" + images.U.blank[180];
         td.appendChild(img);
       } else if (row === 0 && (col === 2 || col === 4)) {
         if (col == 2) {
-          img.src = "../src/" + images.T.blank[270];
+          img.src = "./src/" + images.T.blank[270];
           td.appendChild(img);
         } else if (col == 4) {
-          img.src = "../src/" + images.T.blank[270];
+          img.src = "./src/" + images.T.blank[270];
           td.appendChild(img);
         }
       } else if (
@@ -37,13 +37,13 @@ const init = () => {
         (col === 0 || col == 2 || col === 4 || col === 6)
       ) {
         if (col === 0) {
-          img.src = "../src/" + images.T.blank[0];
+          img.src = "./src/" + images.T.blank[0];
           td.appendChild(img);
         } else if (col == 2) {
-          img.src = "../src/" + images.T.blank[270];
+          img.src = "./src/" + images.T.blank[270];
           td.appendChild(img);
         } else if (col == 4 || col == 6) {
-          img.src = "../src/" + images.T.blank[180];
+          img.src = "./src/" + images.T.blank[180];
           td.appendChild(img);
         }
       } else if (
@@ -51,20 +51,20 @@ const init = () => {
         (col === 0 || col === 2 || col === 4 || col === 6)
       ) {
         if (col === 0) {
-          img.src = "../src/" + images.T.blank[0];
+          img.src = "./src/" + images.T.blank[0];
           td.appendChild(img);
         } else if (col == 2) {
-          img.src = "../src/" + images.T.blank[0];
+          img.src = "./src/" + images.T.blank[0];
           td.appendChild(img);
         } else if (col == 4) {
-          img.src = "../src/" + images.T.blank[90];
+          img.src = "./src/" + images.T.blank[90];
           td.appendChild(img);
         } else if (col == 6) {
-          img.src = "../src/" + images.T.blank[180];
+          img.src = "./src/" + images.T.blank[180];
           td.appendChild(img);
         }
       } else if (row === 6 && (col == 2 || col == 4)) {
-        img.src = "../src/" + images.T.blank[90];
+        img.src = "./src/" + images.T.blank[90];
         td.appendChild(img);
       } else {
         i++;
@@ -101,7 +101,7 @@ const init = () => {
         }
         tmpObj = tmpObj[angle];
 
-        img.src = "../src/" + tmpObj;
+        img.src = "./src/" + tmpObj;
         td.appendChild(img);
       }
       tr.appendChild(td);
@@ -140,7 +140,7 @@ const init = () => {
   }
   tmpObj = tmpObj[angle];
 
-  extraCard.src = "../src/" + tmpObj;
+  extraCard.src = "./src/" + tmpObj;
 };
 
 // Players
@@ -178,7 +178,7 @@ const drawPlayers = () => {
   switch (numberOfPlayers) {
     case 2:
       PlayerOne = document.createElement("img");
-      PlayerOne.src = "../src/one.png";
+      PlayerOne.src ="../src/one.png";
       PlayerOne.style.position = "absolute";
 
       PlayerOne.style.top = `${Player1.y}px`;
@@ -187,7 +187,7 @@ const drawPlayers = () => {
         movePlayer(Player1);
       });
       PlayerTwo = document.createElement("img");
-      PlayerTwo.src = "../src/two.png";
+      PlayerTwo.src ="../src/two.png";
       PlayerTwo.style.position = "absolute";
       PlayerTwo.style.top = `${Player2.y}px`;
       PlayerTwo.style.left = `${Player2.x}px`;
@@ -199,7 +199,7 @@ const drawPlayers = () => {
       break;
     case 3:
       PlayerOne = document.createElement("img");
-      PlayerOne.src = "../src/one.png";
+      PlayerOne.src ="../src/one.png";
       PlayerOne.style.position = "absolute";
 
       PlayerOne.style.top = `${Player1.y}px`;
@@ -208,7 +208,7 @@ const drawPlayers = () => {
         movePlayer(Player1);
       });
       PlayerTwo = document.createElement("img");
-      PlayerTwo.src = "../src/two.png";
+      PlayerTwo.src ="../src/two.png";
       PlayerTwo.style.position = "absolute";
       PlayerTwo.style.top = `${Player2.y}px`;
       PlayerTwo.style.left = `${Player2.x}px`;
@@ -216,7 +216,7 @@ const drawPlayers = () => {
         movePlayer(Player2);
       });
       PlayerThree = document.createElement("img");
-      PlayerThree.src = "../src/three.png";
+      PlayerThree.src ="../src/three.png";
       PlayerThree.style.position = "absolute";
       PlayerThree.style.top = `${Player3.y}px`;
       PlayerThree.style.left = `${Player3.x}px`;
@@ -230,7 +230,7 @@ const drawPlayers = () => {
 
     case 4:
       PlayerOne = document.createElement("img");
-      PlayerOne.src = "../src/one.png";
+      PlayerOne.src ="../src/one.png";
       PlayerOne.style.position = "absolute";
 
       PlayerOne.style.top = `${Player1.y}px`;
@@ -239,7 +239,7 @@ const drawPlayers = () => {
         movePlayer(Player1);
       });
       PlayerTwo = document.createElement("img");
-      PlayerTwo.src = "../src/two.png";
+      PlayerTwo.src ="../src/two.png";
       PlayerTwo.style.position = "absolute";
       PlayerTwo.style.top = `${Player2.y}px`;
       PlayerTwo.style.left = `${Player2.x}px`;
@@ -247,7 +247,7 @@ const drawPlayers = () => {
         movePlayer(Player2);
       });
       PlayerThree = document.createElement("img");
-      PlayerThree.src = "../src/three.png";
+      PlayerThree.src ="../src/three.png";
       PlayerThree.style.position = "absolute";
       PlayerThree.style.top = `${Player3.y}px`;
       PlayerThree.style.left = `${Player3.x}px`;
@@ -255,7 +255,7 @@ const drawPlayers = () => {
         movePlayer(Player3);
       });
       PlayerFour = document.createElement("img");
-      PlayerFour.src = "../src/four.png";
+      PlayerFour.src ="../src/four.png";
       PlayerFour.style.position = "absolute";
       PlayerFour.style.top = `${Player4.y}px`;
       PlayerFour.style.left = `${Player4.x}px`;
