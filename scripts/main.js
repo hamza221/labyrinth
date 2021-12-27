@@ -165,7 +165,7 @@ extraCard.addEventListener("contextmenu", (e) => {
   }
 
   angle = (angle + 90) % 360;
-  extraCard.src = "../src/" + tmpObj[angle];
+  extraCard.src = "./src/" + tmpObj[angle];
 });
 
 //game logic
@@ -186,9 +186,9 @@ const handleClick = (pos) => {
 
       col = 1;
       domGrid[0][col].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[6][col].src} `;
+      extraCard.src = `./src/${gameGrid[6][col].src} `;
       for (row = 1; row < 7; row++) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row - 1][col].src
         } `;
       }
@@ -201,9 +201,9 @@ const handleClick = (pos) => {
       if (p4.x == 3) setPlayerPosition(Player4, p4.x, p4.y + 1);
       col = 3;
       domGrid[0][col].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[6][col].src} `;
+      extraCard.src = `./src/${gameGrid[6][col].src} `;
       for (row = 1; row < 7; row++) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row - 1][col].src
         } `;
       }
@@ -215,9 +215,9 @@ const handleClick = (pos) => {
       if (p3.x == col) setPlayerPosition(Player3, p3.x, p3.y + 1);
       if (p4.x == col) setPlayerPosition(Player4, p4.x, p4.y + 1);
       domGrid[0][col].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[6][col].src} `;
+      extraCard.src = `./src/${gameGrid[6][col].src} `;
       for (row = 1; row < 7; row++) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row - 1][col].src
         } `;
       }
@@ -229,9 +229,9 @@ const handleClick = (pos) => {
       if (p3.y == row) setPlayerPosition(Player3, p3.x + 1, p3.y);
       if (p4.y == row) setPlayerPosition(Player4, p4.x + 1, p4.y);
       domGrid[row][0].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[row][6].src} `;
+      extraCard.src = `./src/${gameGrid[row][6].src} `;
       for (col = 1; col < 7; col++) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row][col - 1].src
         } `;
       }
@@ -243,9 +243,9 @@ const handleClick = (pos) => {
       if (p3.y == row) setPlayerPosition(Player3, p3.x + 1, p3.y);
       if (p4.y == row) setPlayerPosition(Player4, p4.x + 1, p4.y);
       domGrid[row][0].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[row][6].src} `;
+      extraCard.src = `./src/${gameGrid[row][6].src} `;
       for (col = 1; col < 7; col++) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row][col - 1].src
         } `;
       }
@@ -257,9 +257,9 @@ const handleClick = (pos) => {
       if (p3.y == row) setPlayerPosition(Player3, p3.x + 1, p3.y);
       if (p4.y == row) setPlayerPosition(Player4, p4.x + 1, p4.y);
       domGrid[row][0].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[row][6].src} `;
+      extraCard.src = `./src/${gameGrid[row][6].src} `;
       for (col = 1; col < 7; col++) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row][col - 1].src
         } `;
       }
@@ -271,9 +271,9 @@ const handleClick = (pos) => {
       if (p3.x == col) setPlayerPosition(Player3, p3.x, p3.y - 1);
       if (p4.x == col) setPlayerPosition(Player4, p4.x, p4.y - 1);
       domGrid[6][col].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[0][col].src} `;
+      extraCard.src = `./src/${gameGrid[0][col].src} `;
       for (row = 5; row >= 0; row--) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row + 1][col].src
         } `;
       }
@@ -286,9 +286,9 @@ const handleClick = (pos) => {
       if (p3.x == col) setPlayerPosition(Player3, p3.x, p3.y - 1);
       if (p4.x == col) setPlayerPosition(Player4, p4.x, p4.y - 1);
       domGrid[6][col].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[0][col].src} `;
+      extraCard.src = `./src/${gameGrid[0][col].src} `;
       for (row = 5; row >= 0; row--) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row + 1][col].src
         } `;
       }
@@ -300,9 +300,9 @@ const handleClick = (pos) => {
       if (p3.x == col) setPlayerPosition(Player3, p3.x, p3.y - 1);
       if (p4.x == col) setPlayerPosition(Player4, p4.x, p4.y - 1);
       domGrid[6][col].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[0][col].src} `;
+      extraCard.src = `./src/${gameGrid[0][col].src} `;
       for (row = 5; row >= 0; row--) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row + 1][col].src
         } `;
       }
@@ -315,9 +315,9 @@ const handleClick = (pos) => {
       if (p3.y == row) setPlayerPosition(Player3, p3.x - 1, p3.y);
       if (p4.y == row) setPlayerPosition(Player4, p4.x - 1, p4.y);
       domGrid[row][6].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[row][0].src} `;
+      extraCard.src = `./src/${gameGrid[row][0].src} `;
       for (col = 5; col >= 0; col--) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row][col + 1].src
         } `;
       }
@@ -330,9 +330,9 @@ const handleClick = (pos) => {
       if (p3.y == row) setPlayerPosition(Player3, p3.x - 1, p3.y);
       if (p4.y == row) setPlayerPosition(Player4, p4.x - 1, p4.y);
       domGrid[row][6].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[row][0].src} `;
+      extraCard.src = `./src/${gameGrid[row][0].src} `;
       for (col = 5; col >= 0; col--) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row][col + 1].src
         } `;
       }
@@ -345,9 +345,9 @@ const handleClick = (pos) => {
       if (p3.y == row) setPlayerPosition(Player3, p3.x - 1, p3.y);
       if (p4.y == row) setPlayerPosition(Player4, p4.x - 1, p4.y);
       domGrid[row][6].children[0].src = extraCard.src;
-      extraCard.src = `../src/${gameGrid[row][0].src} `;
+      extraCard.src = `./src/${gameGrid[row][0].src} `;
       for (col = 5; col >= 0; col--) {
-        domGrid[row][col].children[0].src = `../src/${
+        domGrid[row][col].children[0].src = `./src/${
           gameGrid[row][col + 1].src
         } `;
       }
@@ -521,11 +521,11 @@ const drawGoals = (player) => {
       cardsOne.innerHTML = "";
       for (let i = 0; i < player.goals.length; i++) {
         if (i === player.currenGoal) {
-          cardsOne.innerHTML += ` <img src="../src/${
+          cardsOne.innerHTML += ` <img src="./src/${
             player.goals[player.currenGoal]
           }.png" style="border: 1px solid red" class="goalImage"/>`;
         } else {
-          cardsOne.innerHTML += ` <img src="../src/${player.goals[i]}.png"  class="goalImage"/>`;
+          cardsOne.innerHTML += ` <img src="./src/${player.goals[i]}.png"  class="goalImage"/>`;
         }
       }
       break;
@@ -533,11 +533,11 @@ const drawGoals = (player) => {
       cardsTwo.innerHTML = "";
       for (let i = 0; i < player.goals.length; i++) {
         if (i === player.currenGoal) {
-          cardsTwo.innerHTML += ` <img src="../src/${
+          cardsTwo.innerHTML += ` <img src="./src/${
             player.goals[player.currenGoal]
           }.png" style="border: 1px solid red " class="goalImage"/>`;
         } else {
-          cardsTwo.innerHTML += ` <img src="../src/${player.goals[i]}.png" class="goalImage"/>`;
+          cardsTwo.innerHTML += ` <img src="./src/${player.goals[i]}.png" class="goalImage"/>`;
         }
       }
       break;
@@ -545,11 +545,11 @@ const drawGoals = (player) => {
       cardsThree.innerHTML = "";
       for (let i = 0; i < player.goals.length; i++) {
         if (i === player.currenGoal) {
-          cardsThree.innerHTML += ` <img src="../src/${
+          cardsThree.innerHTML += ` <img src="./src/${
             player.goals[player.currenGoal]
           }.png" style="border: 1px solid red;" class="goalImage"/>`;
         } else {
-          cardsThree.innerHTML += ` <img src="../src/${player.goals[i]}.png" class="goalImage"/>`;
+          cardsThree.innerHTML += ` <img src="./src/${player.goals[i]}.png" class="goalImage"/>`;
         }
       }
       break;
@@ -557,11 +557,11 @@ const drawGoals = (player) => {
       cardsFour.innerHTML = "";
       for (let i = 0; i < player.goals.length; i++) {
         if (i === player.currenGoal) {
-          cardsFour.innerHTML += ` <img src="../src/${
+          cardsFour.innerHTML += ` <img src="./src/${
             player.goals[player.currenGoal]
           }.png" style="border: 1px solid red"  class="goalImage"/>`;
         } else {
-          cardsFour.innerHTML += ` <img src="../src/${player.goals[i]}.png" class="goalImage" />`;
+          cardsFour.innerHTML += ` <img src="./src/${player.goals[i]}.png" class="goalImage" />`;
         }
       }
       break;
