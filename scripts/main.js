@@ -137,7 +137,9 @@ start.addEventListener("submit", (e) => {
 extraCard.addEventListener("contextmenu", (e) => {
   e.preventDefault();
   let tmpObj;
-  let tmpSrc = extraCard.src.split("/")[4];
+  let tmp = extraCard.src;
+  let tmpSrc = tmp.substring(tmp.lastIndexOf("/") + 1, tmp.length);
+
   let type = getType(tmpSrc);
   let angle = getAngle(tmpSrc);
   let treasure = getTreasure(tmpSrc);
