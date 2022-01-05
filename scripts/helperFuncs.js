@@ -1,5 +1,5 @@
 const getAccesibleSides = (src) => {
-  console.log(src);
+  console.log(typeof(src));
   let sides = src.split("_")[1].split(".")[0];
   let result = { right: false, left: false, top: false, bottom: false };
   for (let index = 0; index < sides.length; index++) {
