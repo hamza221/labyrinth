@@ -1,5 +1,5 @@
 const getAccesibleSides = (src) => {
-  console.log(typeof(src));
+
   let sides = src.split("_")[1].split(".")[0];
   let result = { right: false, left: false, top: false, bottom: false };
   for (let index = 0; index < sides.length; index++) {
@@ -39,7 +39,8 @@ const getXY = (td) => {
   return { col: x, row: y };
 };
 const getTileObj = (td) => {
-  let src = td.children[0].src.split("/")[4];
+  let tmp =td.children[0].src;
+  let src = td.children[0].src.substring(tmp.lastIndexOf("/")+1,tmp.length);
   return {
     src: src,
     type: getType(src),
